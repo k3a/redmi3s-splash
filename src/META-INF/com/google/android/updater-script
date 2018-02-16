@@ -1,0 +1,8 @@
+get_device_compatible("land") == "OK" || abort("This package is for \"land\" devices; this is a \"" + getprop("ro.product.device") + "\".");
+ui_print("k3a.me - splash changer");
+
+show_progress(0.200000, 10);
+
+package_extract_file("splash.img", "/dev/block/bootdevice/by-name/splash");
+
+show_progress(0.100000, 2);
